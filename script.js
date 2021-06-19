@@ -11,3 +11,7 @@ function computerPlay () {
         return "Scissors";
     }
 }
+function playerSelection () {
+    let selection = prompt("Enter Rock, Paper, or Scissors", "Choice");
+    return selection;
+}
