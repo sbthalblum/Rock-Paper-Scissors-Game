@@ -1,3 +1,3 @@
-function a (num) {
-    console.log(num)
-}
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
