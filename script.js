@@ -6,7 +6,7 @@ function computerPlay () {
     if (randomNumber === 0) {
         return "rock";
     } else if (randomNumber === 1) {
-        return "raper";
+        return "paper";
     } else {
         return "scissors";
     }
@@ -32,5 +32,22 @@ function playRound(playerSelect, computerSelect) {
     } else if (playerSelect == "scissors" && computerSelect == "rock") {
         return "You lose! Rock beats scissors"
     }
-
+}
+function game () {
+    let playerWin = 0;
+    let computerWin = 0;
+    for (let i=0; i<5; i++) {
+        let result = playRound(playerSelection(), computerPlay());
+        if (result.slice(0,5) == "You w") {
+            computerWin += 1;
+        } else {
+            playerWin += 1;
+        }
+        console.log(result)
+    }
+    if (computerWin > playerWin) {
+        console.log(`You lose, computer wins ${computerWin} to ${playerWin}`)
+    } else {
+        console.log(`You win! You beat computer ${playerWin} to ${computerWin}`)
+    }
 }
