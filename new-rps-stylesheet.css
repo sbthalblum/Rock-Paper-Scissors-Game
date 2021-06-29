@@ -18,6 +18,16 @@ html, body {
 }
 .container2 {
     flex-grow: 2.5;
+    display: flex;
+    justify-content: center;
+}
+.absolute-container {
+    max-height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .container3 {
     flex-grow: 1;
@@ -43,3 +53,9 @@ html, body {
     position: relative;
     top: 10px;
 }
+img {
+    height: 350px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
