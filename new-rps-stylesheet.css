@@ -7,5 +7,39 @@ html, body {
 }
 .background {
     display: flex;
+    flex-direction: column;
     background-color: lightgrey;
+}
+.header {
+    flex-grow: 1;
+}
+.container1 {
+    flex-grow: .25;
+}
+.container2 {
+    flex-grow: 2.5;
+}
+.container3 {
+    flex-grow: 1;
+}
+.container4 {
+    flex-grow: .25;
+}
+.container5 {
+    flex-grow: 1;
+}
+.title {
+    font-size: 36px;
+    font-family: Comic Sans MS, cursive;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 150px;
+}
+.text {
+    font-size: 25px;
+    font-family: Comic Sans MS, cursive;
+    text-align: center;
+    position: relative;
+    top: 10px;
 }
