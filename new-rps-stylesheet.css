@@ -30,13 +30,37 @@ html, body {
     align-items: center;
 }
 .container3 {
-    flex-grow: 1;
+    flex-grow: .75;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.player-choice {
+    background-color: lightseagreen;
+    height: auto;
+    width: auto;
+}
+.computer-choice {
+    background-color:lightseagreen;
+    height: auto;
+    width: auto;
 }
 .container4 {
-    flex-grow: .25;
+    flex-grow: .50;
+}
+.results {
+    text-align: center;
+    height: auto;
+    width: auto;
 }
 .container5 {
     flex-grow: 1;
+}
+.score {
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    width: auto;
 }
 .title {
     font-size: 36px;
@@ -53,7 +77,7 @@ html, body {
     position: relative;
     top: 10px;
 }
-img {
+.pictures {
     height: 350px;
     max-width: 100%;
     object-fit: contain;
