@@ -34,8 +34,7 @@ function playRound(playerSelect, computerSelect) {
     }
 }
 
-let playerWin = 0;
-let computerWin = 0;
+
 function game () {
         let result = playRound(playerSelection(), computerPlay());
         if (result.slice(0,5) == "You w") {
@@ -51,3 +50,82 @@ function game () {
         console.log(`You win! You beat computer ${playerWin} to ${computerWin}`)
     }
 }
+
+let playerWin = 0;
+let computerWin = 0;
+
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+const res = document.querySelector('#res');
+const sco = document.querySelector('#sco');
+const playerSelect = document.querySelector('#playerSelect');
+const computerSelect = document.querySelector('#computerSelect');
+
+const scoreContainer = document.querySelector('#score-container');
+const resetButton = document.createElement('button');
+resetButton.innerHTML = "Reset";
+
+resetButton.addEventListener('click', () => {
+    playerSelect.textContent = "";
+    computerSelect.textContent = "";
+    res.innerHTML = "";
+    sco.textContent = "";
+    playerWin = 0;
+    computerWin = 0;
+})
+
+rock.addEventListener('click', () => {
+    let compSelect = computerPlay()
+    let result = playRound('rock', compSelect);
+    playerSelect.textContent = 'You choose: rock';
+    computerSelect.textContent = `I choose: ${compSelect}`;
+    if (result.slice(0,5) == "You w") {
+        playerWin += 1;
+        res.innerHTML = result.fontcolor("green");
+    } else if (result.slice(0,5) == "You l") {
+        computerWin += 1;
+        res.innerHTML = result.fontcolor("red");
+    } else {
+        res.innerHTML = result.fontcolor("yellow");
+    }
+    sco.textContent = `Score | You: ${playerWin}       Me: ${computerWin} |`
+    scoreContainer.appendChild(resetButton);
+})
+
+paper.addEventListener('click', () => {
+    let compSelect = computerPlay()
+    let result = playRound('paper', compSelect);
+    playerSelect.textContent = 'You choose: paper';
+    computerSelect.textContent = `I choose: ${compSelect}`;
+    if (result.slice(0,5) == "You w") {
+        playerWin += 1;
+        res.innerHTML = result.fontcolor("green");
+    } else if (result.slice(0,5) == "You l") {
+        computerWin += 1;
+        res.innerHTML = result.fontcolor("red");
+    } else {
+        res.innerHTML = result.fontcolor("yellow");
+    }
+    sco.textContent = `Score | You: ${playerWin}       Me: ${computerWin} |`
+    scoreContainer.appendChild(resetButton);
+})
+
+scissors.addEventListener('click', () => {
+    let compSelect = computerPlay()
+    let result = playRound('scissors', compSelect);
+    playerSelect.textContent = 'You choose: scissors';
+    computerSelect.textContent = `I choose: ${compSelect}`;
+    if (result.slice(0,5) == "You w") {
+        playerWin += 1;
+        res.innerHTML = result.fontcolor("green");
+    } else if (result.slice(0,5) == "You l") {
+        computerWin += 1;
+        res.innerHTML = result.fontcolor("red");
+    } else {
+        res.innerHTML = result.fontcolor("yellow");
+    }
+    sco.textContent = `Score | You: ${playerWin}       Me: ${computerWin} |`
+    scoreContainer.appendChild(resetButton);
+})

@@ -12,14 +12,20 @@ html, body {
 }
 .header {
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 156px;
 }
 .container1 {
     flex-grow: .25;
+    min-height: 74px;
 }
 .container2 {
     flex-grow: 2.5;
     display: flex;
     justify-content: center;
+    min-height: 350px;
 }
 .absolute-container {
     max-height: 100%;
@@ -34,41 +40,54 @@ html, body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    min-height: 131px;
 }
 .player-choice {
-    background-color: lightseagreen;
+    font-family: Comic Sans MS, cursive;
     height: auto;
     width: auto;
+    font-weight: bold;
+    font-size: 25px;
+
 }
 .computer-choice {
-    background-color:lightseagreen;
+    font-family: Comic Sans MS, cursive;
     height: auto;
     width: auto;
+    font-weight: bold;
+    font-size: 25px;
 }
 .container4 {
     flex-grow: .50;
 }
 .results {
-    text-align: center;
+    font-family: Comic Sans MS, cursive;
     height: auto;
     width: auto;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
 }
 .container5 {
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .score {
-    display: flex;
-    justify-content: space-evenly;
+    font-family: Comic Sans MS, cursive;
     height: auto;
     width: auto;
+    font-weight: bold;
+    font-size: 25px;
 }
 .title {
     font-size: 36px;
     font-family: Comic Sans MS, cursive;
-    font-weight: bold;
+    font-weight: 900;
     text-align: center;
-    position: relative;
-    top: 150px;
+    position: absolute;
 }
 .text {
     font-size: 25px;
@@ -81,5 +100,10 @@ html, body {
     height: 350px;
     max-width: 100%;
     object-fit: contain;
+    border-radius: 10px;
 }
-
+.pictures:hover {
+    transform: scale(1.05);
+    border-color: #ffc600;
+    box-shadow: 0 0 30px #ffc600;
+}
