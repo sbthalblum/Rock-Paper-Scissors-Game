@@ -70,10 +70,10 @@ resetButton.innerHTML = "Reset";
 resetButton.addEventListener('click', () => {
     playerSelect.textContent = "";
     computerSelect.textContent = "";
-    res.innerHTML = "";
-    sco.textContent = "";
+    res.innerHTML = ""
     playerWin = 0;
     computerWin = 0;
+    sco.textContent = `Score | You: ${playerWin}       Me: ${computerWin} |`
 })
 
 rock.addEventListener('click', () => {
@@ -88,7 +88,7 @@ rock.addEventListener('click', () => {
         computerWin += 1;
         res.innerHTML = result.fontcolor("red");
     } else {
-        res.innerHTML = result.fontcolor("yellow");
+        res.innerHTML = result.fontcolor("#cccc00");
     }
     sco.textContent = `Score | You: ${playerWin}       Me: ${computerWin} |`
     scoreContainer.appendChild(resetButton);
@@ -106,7 +106,7 @@ paper.addEventListener('click', () => {
         computerWin += 1;
         res.innerHTML = result.fontcolor("red");
     } else {
-        res.innerHTML = result.fontcolor("yellow");
+        res.innerHTML = result.fontcolor("#cccc00");
     }
     sco.textContent = `Score | You: ${playerWin}       Me: ${computerWin} |`
     scoreContainer.appendChild(resetButton);
@@ -124,7 +124,7 @@ scissors.addEventListener('click', () => {
         computerWin += 1;
         res.innerHTML = result.fontcolor("red");
     } else {
-        res.innerHTML = result.fontcolor("yellow");
+        res.innerHTML = result.fontcolor("#cccc00");
     }
     sco.textContent = `Score | You: ${playerWin}       Me: ${computerWin} |`
     scoreContainer.appendChild(resetButton);
